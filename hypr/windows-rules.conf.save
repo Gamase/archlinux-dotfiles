@@ -1,0 +1,42 @@
+# ============================================
+# REGLAS DE VENTANAS
+# ============================================
+
+# ----- Alacritty (homebase) -----
+windowrule = match:class ^(Alacritty)$, match:title ^(homebase)$, float true
+windowrule = match:class ^(Alacritty)$, match:title ^(homebase)$, workspace 1
+windowrule = match:class ^(Alacritty)$, match:title ^(homebase)$, move 15 188
+windowrule = match:class ^(Alacritty)$, match:title ^(homebase)$, size 1077 634
+
+# ----- Kitty (matrix) -----
+windowrule = match:class ^(kitty)$, match:title ^(matrix)$, float true
+windowrule = match:class ^(kitty)$, match:title ^(matrix)$, workspace 1 silent
+windowrule = match:class ^(kitty)$, match:title ^(matrix)$, size 785 431
+windowrule = match:class ^(kitty)$, match:title ^(matrix)$, move 1123 555
+
+# ----- Kitty (clock) -----
+windowrule = match:class ^(kitty)$, match:title ^(clock)$, float true
+windowrule = match:class ^(kitty)$, match:title ^(clock)$, workspace 1 silent
+windowrule = match:class ^(kitty)$, match:title ^(clock)$, size 665 292
+windowrule = match:class ^(kitty)$, match:title ^(clock)$, move 1178 170
+
+# ----- Spotify -----
+windowrule = match:class ^(spotify)$, float true
+windowrule = match:class ^(spotify)$, center true
+windowrule = match:class ^(spotify)$, size 900 600
+windowrule = match:class ^(spotify)$, workspace 2 silent
+
+# ----- Asciiquarium -----
+windowrule = match:class ^(kitty)$, match:title ^(aquarium)$, float true
+windowrule = match:class ^(kitty)$, match:title ^(aquarium)$, center true
+windowrule = match:class ^(kitty)$, match:title ^(aquarium)$, size 500 300
+windowrule = match:class ^(kitty)$, match:title ^(aquarium)$, workspace 2 silent
+windowrule = match:class ^(kitty)$, match:title ^(aquarium)$, opacity 0.7
+
+# ----- Cava (music) -----
+windowrule = match:class ^(Alacritty)$, match:title ^(cava-music)$, float true
+windowrule = match:class ^(Alacritty)$, match:title ^(cava-music)$, workspace 2 silent
+windowrule = match:class ^(Alacritty)$, match:title ^(cava-music)$, size 500 200
+windowrule = match:class ^(Alacritty)$, match:title ^(cava-music)$, move 100 800
+windowrule = match:class ^(Alacritty)$, match:title ^(cava-music)$, opacity 0.6
+

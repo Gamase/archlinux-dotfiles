@@ -1,0 +1,91 @@
+env = XDG_SESSION_TYPE,wayland
+env = XDG_CURRENT_DESKTOP,Hyprland
+env = XDG_SESSION_DESKTOP,Hyprland
+env = XDG_RUNTIME_DIR,/run/user/1000
+
+exec-once = ~/.config/hypr/startup.sh
+
+
+windowrule = match:class ^(Alacritty)$, match:title ^(homebase)$, float true
+windowrule = match:class ^(Alacritty)$, match:title ^(homebase)$, workspace 1 silent
+windowrule = match:class ^(Alacritty)$, match:title ^(homebase)$, move 30 110
+windowrule = match:class ^(Alacritty)$, match:title ^(homebase)$, size 1023 884
+
+
+# Matrix - abajo a la izquierda, grande
+windowrule = match:class ^(kitty)$, match:title ^(matrix)$, size 801 405
+windowrule = match:class ^(kitty)$, match:title ^(matrix)$, move 1093 570
+
+# Reloj - arriba a la derecha
+windowrule = match:class ^(kitty)$, match:title ^(clock)$, size 665 292
+windowrule = match:class ^(kitty)$, match:title ^(clock)$, move 1178 170
+windowrule = match:class ^(kitty)$, match:title ^(matrix)$, workspace 1 silent
+windowrule = match:class ^(kitty)$, match:title ^(clock)$, workspace 1 silent
+windowrule = match:class ^(kitty)$, match:title ^(matrix)$, float true
+windowrule = match:class ^(kitty)$, match:title ^(clock)$, float true
+
+
+env = LIBVA_DRIVER_NAME,nvidia
+env = GBM_BACKEND,nvidia-drm
+env = __GLX_VENDOR_LIBRARY_NAME,nvidia
+
+monitor = ,preferred,auto,1
+
+input {
+    kb_layout = us
+}
+
+general {
+    gaps_in = 5
+    gaps_out = 10
+    border_size = 2
+    col.active_border = rgb(ff0000)
+    col.inactive_border = rgb(111111)
+}
+
+decoration {
+    rounding = 10
+    blur {
+        enabled = true
+        size = 8
+        passes = 3
+    }
+}
+
+$mod = SUPER
+
+bind = $mod, RETURN, exec, alacritty
+bind = $mod, D, exec, wofi --show drun
+bind = $mod, Q, killactive
+bind = $mod, F, fullscreen
+bind = $mod, M, exit
+bind = $mod, W, togglefloating
+
+
+bind = SUPER, 1, workspace, 1
+bind = SUPER, 2, workspace, 2
+bind = SUPER, 3, workspace, 3
+bind = SUPER, 4, workspace, 4
+bind = SUPER, 5, workspace, 5
+
+bind = SUPER, RIGHT, workspace, e+1
+bind = SUPER, LEFT, workspace, e-1
+
+bindm = SUPER, mouse:272, movewindow
+
+
+bindm = SUPER, mouse:273, resizewindow
+
+bind = ALT, TAB, exec, ~/.config/hypr/alt-tab.sh
+
+# Volumen
+bind = , XF86AudioRaiseVolume, exec, pamixer -i 5
+bind = , XF86AudioLowerVolume, exec, pamixer -d 5
+bind = , XF86AudioMute, exec, pamixer -t
+
+
+# Brillo
+bind = , XF86MonBrightnessUp, exec, brightnessctl set +5%
+bind = , XF86MonBrightnessDown, exec, brightnessctl set 5%-
+
+bind = SUPER, P, exec, grim -g "$(slurp)" - | wl-copy

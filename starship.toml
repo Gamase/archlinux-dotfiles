@@ -1,0 +1,14 @@
+add_newline = false
+format = """
+[┌─](bold red)$directory$git_branch$git_status
+[└─➜](bold red) """
+[directory]
+style = "bold red"
+[git_branch]
+symbol = " "
+style = "bold red"
+[git_status]
+style = "bold red"
+[character]
+success_symbol = "[➜](bold red)"
+error_symbol = "[✗](bold red)"

@@ -1,0 +1,44 @@
+(defvar volume 50)
+(defvar brightness 50)
+
+(defwindow volume-slider
+  :monitor 0
+  :geometry (geometry
+    :x "1680px"
+    :y "38px"
+    :width "180px"
+    :height "40px"
+    :anchor "top left")
+  :stacking "overlay"
+  :exclusive false
+  :focusable false
+  (box :class "slider-box" :orientation "h" :space-evenly false :spacing 8
+    (label :class "slider-icon" :text "󰕾")
+    (scale
+      :class "slider"
+      :value volume
+      :min 0
+      :max 101
+      :orientation "h"
+      :onchange "pamixer --set-volume {}")))
+
+(defwindow brightness-slider
+  :monitor 0
+  :geometry (geometry
+    :x "1820px"
+    :y "38px"
+    :width "180px"
+    :height "40px"
+    :anchor "top left")
+  :stacking "overlay"
+  :exclusive false
+  :focusable false
+  (box :class "slider-box" :orientation "h" :space-evenly false :spacing 8
+    (label :class "slider-icon" :text "󰃠")
+    (scale
+      :class "slider"
+      :value brightness
+      :min 0
+      :max 101
+      :orientation "h"
+      :onchange "brightnessctl set {}%")))
