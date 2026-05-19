@@ -1,5 +1,5 @@
 #!/bin/bash
-swaybg -i /home/gamase/Downloads/fondo.jpg &
+swaybg -i "$HOME/Downloads/fondo.jpg" &
 waybar &
 sleep 2  # espera a que Hyprland esté completamente inicializado
 alacritty --title homebase -e zsh &

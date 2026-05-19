@@ -1,5 +1,5 @@
 #!/bin/bash
-BATTERY_PATH="BAT1"
+BATTERY_PATH=$(ls /sys/class/power_supply/ | grep -E "^BAT" | head -1)
 CAPACITY=$(cat /sys/class/power_supply/$BATTERY_PATH/capacity)
 STATUS=$(cat /sys/class/power_supply/$BATTERY_PATH/status)
 

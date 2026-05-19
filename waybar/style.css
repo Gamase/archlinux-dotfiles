@@ -7,8 +7,8 @@
 }
 
 #waybar {
-    background: rgba(18, 0, 0, 0.92);
-    border-bottom: 1px solid #3a0000;
+    background: #000000;
+    border-bottom: 1px solid #ff0033;
 }
 
 #clock,
@@ -19,7 +19,18 @@
 #custom-volume,
 #custom-brightness {
     padding: 0 12px;
-    color: #ff3333;
+    color: #ff0033;
+    transition: opacity 0.15s ease-out;
+}
+
+#clock:hover,
+#custom-power:hover,
+#custom-wifi:hover,
+#custom-bluetooth:hover,
+#custom-battery:hover,
+#custom-volume:hover,
+#custom-brightness:hover {
+    opacity: 0.65;
 }
 
 #workspaces {
@@ -28,10 +39,11 @@
 
 #workspaces button {
     background: transparent;
-    color: #440000;
+    color: #660011;
     padding: 0 5px;
     font-size: 10px;
     min-width: 0;
+    transition: opacity 0.15s ease-out;
 }
 
 #workspaces button.active {
@@ -40,28 +52,29 @@
 
 #workspaces button:hover {
     background: transparent;
-    color: #ff3333;
+    color: #ff0033;
+    opacity: 0.75;
     box-shadow: none;
     text-shadow: none;
 }
 
-#custom-battery.low { color: #ff0000; }
-#custom-battery.medium { color: #ff6600; }
-#custom-battery.high { color: #ff3333; }
-#custom-battery.charging { color: #ff0033; }
+#custom-battery.low      { color: #ff0033; }
+#custom-battery.medium   { color: #cc0022; }
+#custom-battery.high     { color: #ff0033; }
+#custom-battery.charging { color: #ff3355; }
 
-#custom-volume.muted { color: #440000; }
-#custom-volume.low { color: #ff0000; }
-#custom-volume.medium { color: #ff3333; }
-#custom-volume.high { color: #ff6666; }
+#custom-volume.muted  { color: #440011; }
+#custom-volume.low    { color: #cc0022; }
+#custom-volume.medium { color: #ff0033; }
+#custom-volume.high   { color: #ff3355; }
 
-#custom-brightness.low { color: #ff0000; }
-#custom-brightness.medium { color: #ff3333; }
-#custom-brightness.high { color: #ff6666; }
+#custom-brightness.low    { color: #cc0022; }
+#custom-brightness.medium { color: #ff0033; }
+#custom-brightness.high   { color: #ff3355; }
 
 tooltip {
-    background: rgba(18, 0, 0, 0.95);
-    border: 1px solid #3a0000;
-    border-radius: 10px;
-    color: #ff3333;
+    background: #000000;
+    border: 1px solid #ff0033;
+    border-radius: 8px;
+    color: #ff0033;
 }

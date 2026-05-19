@@ -1,5 +1,0 @@
-#!/bin/bash
-waybar &
-sleep 2  # espera a que Hyprland esté completamente inicializado
-alacritty &
-
