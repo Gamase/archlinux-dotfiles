@@ -1,5 +1,11 @@
+# Backups y temporales
 *.bak
 *.save
 *.orig
 *.old
+*~
 backup/
+
+# Datos de sesión y caché
+kitty/kitty.sock*
+cava/*.pid

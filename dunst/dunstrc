@@ -1,0 +1,142 @@
+# ============================================================
+# DUNST — Cyberpunk Dark/Red Theme
+# Paleta: fondo #0a0010 · acento #ff0033 · texto #ff1616
+# ============================================================
+
+[global]
+    monitor = 0
+    follow = none
+
+    # ---- Wayland ----
+    force_xwayland = false
+    layer = top
+
+    # ---- Geometría ----
+    width = (0, 380)
+    height = (0, 200)
+    origin = top-right
+    offset = 20x20
+    notification_limit = 5
+    gap_size = 8
+
+    # ---- Apariencia ----
+    transparency = 0
+    corner_radius = 10
+    frame_width = 2
+    frame_color = "#ff0033"
+    separator_height = 1
+    separator_color = "#330010"
+    padding = 14
+    horizontal_padding = 16
+    text_icon_padding = 10
+
+    # ---- Barra de progreso ----
+    progress_bar = true
+    progress_bar_height = 6
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+    progress_bar_corner_radius = 6
+    highlight = "#ff0033"
+
+    # ---- Texto ----
+    font = JetBrainsMono Nerd Font 11
+    line_height = 2
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    word_wrap = yes
+    ellipsize = middle
+    ignore_newline = no
+    show_age_threshold = 30
+
+    # ---- Íconos ----
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 48
+    icon_theme = candy-icons, Papirus, hicolor
+    enable_recursive_icon_lookup = true
+
+    # ---- Stack / historial ----
+    stack_duplicates = true
+    hide_duplicate_count = false
+    sticky_history = yes
+    history_length = 20
+    show_indicators = yes
+    indicate_hidden = yes
+
+    # ---- Mouse ----
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+    # ---- Misc ----
+    dmenu = /usr/bin/wofi --dmenu
+    browser = /usr/bin/firefox -new-tab
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+
+
+# ============================================================
+# URGENCIAS
+# ============================================================
+
+[urgency_low]
+    # Discreta — semitransparente, borde tenue
+    background = "#080010bb"
+    foreground = "#cc2233"
+    frame_color = "#330010"
+    timeout = 4
+
+[urgency_normal]
+    # Estándar — rojo cyberpunk con blur de fondo
+    background = "#0a0010cc"
+    foreground = "#ff1616"
+    frame_color = "#ff0033"
+    timeout = 6
+
+[urgency_critical]
+    # Crítica — más opaca, sin timeout, borde brillante
+    background = "#0d0008e5"
+    foreground = "#ff4040"
+    frame_color = "#ff0033"
+    highlight = "#ff6600"
+    timeout = 0
+
+
+# ============================================================
+# REGLAS DE APP
+# ============================================================
+
+# Gamemode — notificaciones del script toggle-gamemode.sh
+[gamemode_on]
+    appname = notify-send
+    summary = "*Modo Juego*"
+    frame_color = "#ff6600"
+    foreground = "#ff8800"
+    timeout = 2
+
+[gamemode_off]
+    appname = notify-send
+    summary = "*Modo Normal*"
+    frame_color = "#440033"
+    foreground = "#cc2244"
+    timeout = 2
+
+# Spotify — notificaciones musicales más sutiles
+[spotify]
+    appname = Spotify
+    frame_color = "#220044"
+    foreground = "#bb0033"
+    timeout = 4
+
+# Volumen / Brillo — muy breves
+[volume]
+    appname = pamixer
+    timeout = 2
+
+[brightness]
+    appname = brightnessctl
+    timeout = 2

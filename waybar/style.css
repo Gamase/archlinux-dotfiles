@@ -72,6 +72,18 @@
 #custom-brightness.medium { color: #ff0033; }
 #custom-brightness.high   { color: #ff3355; }
 
+#mpris {
+    color: #880022;
+    padding: 0 14px;
+    font-size: 11px;
+    font-style: italic;
+    transition: opacity 0.15s ease-out;
+}
+
+#mpris:hover {
+    opacity: 0.65;
+}
+
 tooltip {
     background: #000000;
     border: 1px solid #ff0033;

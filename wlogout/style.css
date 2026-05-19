@@ -1,0 +1,46 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+window {
+    background-color: rgba(0, 0, 0, 0.92);
+}
+
+button {
+    color: #ff0033;
+    background-color: rgba(10, 0, 0, 0.9);
+    border: 1px solid rgba(255, 0, 51, 0.3);
+    border-radius: 12px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 70px;
+    margin: 10px;
+    min-width: 140px;
+    min-height: 160px;
+    transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+}
+
+button label {
+    color: #ff0033;
+    font-size: 13px;
+    margin-top: 100px;
+}
+
+button:hover {
+    background-color: rgba(255, 0, 51, 0.15);
+    border-color: #ff0033;
+}
+
+button:active {
+    background-color: rgba(255, 0, 51, 0.3);
+    border-color: #ff0033;
+}
+
+#lock     { background-image: url("icons/lock_hq.png"); }
+#logout   { background-image: url("icons/logout_hq.png"); }
+#shutdown { background-image: url("icons/shutdown_hq.png"); }
+#suspend  { background-image: url("icons/suspend_hq.png"); }
+#reboot   { background-image: url("icons/reboot_hq.png"); }
